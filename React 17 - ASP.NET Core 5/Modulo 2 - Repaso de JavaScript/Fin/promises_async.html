@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head></head>
+  <body>
+    <span>Promesas y Async</span>
+    <script>
+      function ejemploPromesa() {
+        fetch("https://jsonplaceholder.typicode.com/todos/1")
+          .then((response) => response.json())
+          .catch((error) => console.error("ha habido un error"))
+          .then((json) => console.log(json));
+      }
+
+      async function ejemploPromesaAsync() {
+        try {
+          const respuesta = await fetch(
+            "https://jsonplaceholder.typicode/todos/1"
+          );
+          const json = await respuesta.json();
+          console.log('async', json);
+        } catch (ex) {
+          console.log("async: ha habido un error");
+        }
+      }
+
+      // ejemploPromesa();
+      ejemploPromesaAsync();
+    </script>
+  </body>
+</html>

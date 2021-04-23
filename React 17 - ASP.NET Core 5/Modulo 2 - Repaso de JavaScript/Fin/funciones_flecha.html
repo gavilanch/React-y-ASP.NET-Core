@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head></head>
+  <body>
+    <span>Hola mundo</span>
+    <script>
+      const obj = {
+        funcionNormal: function () {
+          console.log("funcion normal", this);
+        },
+        funcionFlecha: () => {
+          console.log("función flecha", this);
+        },
+      };
+
+      console.log("this del ambiente", this);
+      obj.funcionNormal();
+      obj.funcionFlecha();
+    </script>
+  </body>
+</html>

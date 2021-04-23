@@ -1,0 +1,16 @@
+{
+  "dependencies": {
+    "mssql1": {
+      "resourceId": "/subscriptions/[parameters('subscriptionId')]/resourcegroups/[parameters('resourceGroupName')]/providers/Microsoft.Sql/servers/peliculasapidbserver456/databases/PeliculasAPI_db",
+      "type": "mssql.azure",
+      "connectionId": "defaultConnection",
+      "secretStore": "AzureAppSettings"
+    },
+    "storage1": {
+      "type": "storage",
+      "connectionId": "connectionStrings/AzureStorage",
+      "suggestion": "true",
+      "ignored": "true"
+    }
+  }
+}
